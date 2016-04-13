@@ -1,0 +1,18 @@
+mongokeys:
+  container_name: mongokeys
+
+  image: mvertes/alpine-mongo
+  ports:
+    - 47017:27017
+
+keysweb:
+  container_name: keysweb
+  build: ./docker
+  ports:
+    - "80:80"
+  links:
+    - mongokeys
+  volumes:
+    - ./public:/var/www:rw
+  environment:
+      VIRTUAL_HOST: keys.example.com

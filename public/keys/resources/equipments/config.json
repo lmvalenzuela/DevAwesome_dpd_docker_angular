@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"hostName": {
+			"name": "hostName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "hostName",
+			"order": 0
+		},
+		"hostAddress": {
+			"name": "hostAddress",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "hostAddress",
+			"order": 1
+		},
+		"logins": {
+			"name": "logins",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "logins",
+			"order": 2
+		}
+	}
+}

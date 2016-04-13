@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="keys">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Computer's inventory</title>
+  <!-- Angular does some things with CSS so it's good to load this in the head -->
+  <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+</head>
+<body ng-controller="LoginController as login">
+<div class="container"></div>
+
+  <div class="wrapper">
+    <div class="container">
+      <form action="" method="post" name="Login_Form" id="Login_Form" class="form-signin" ng-submit="login.submit()">
+        <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+        <hr class="colorgraph"><br>
+
+        <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" ng-model="login.userName" />
+        <input type="password" class="form-control" name="Password" placeholder="Password" required="" ng-model="login.passWord" />
+
+        <button class="btn btn-lg btn-primary btn-block"  name="Submit" id="Submit" value="Login" type="Submit">Login</button>
+      </form>
+    </div><!--/container-->
+  </div><!--/jumbotron-->
+</div><!--/container-->
+<script type="text/javascript" src="/js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="/dpd.js"></script>
+<script type="text/javascript" src="js/controllers.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#Login_Form').on('submit', function(e){
+    e.preventDefault();
+  });
+});
+</script>
+</body>
+</html>
